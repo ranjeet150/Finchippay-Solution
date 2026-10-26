@@ -7,8 +7,8 @@
   "scripts": {
     "generate:sdk": "bash scripts/generate-sdk.sh",
     "check:sdk": "bash scripts/check-sdk.sh",
-    "build:sdk": "npm run build --workspace=sdk",
-    "build": "npm run build --workspace=sdk --workspace=frontend",
+    "build:sdk": "node init && npm run build --workspace=sdk",
+    "build": "node init && npm run build --workspace=sdk --workspace=frontend",
     "load-test": "node scripts/load-test.js",
     "benchmarks:compare": "node scripts/compare-benchmarks.js benchmarks/base.json benchmarks/current.json benchmarks/summary.md",
     "benchmarks:smoke": "npm --prefix backend test -- --runInBand --testPathPatterns=perf && (npm --prefix frontend exec -- jest --runInBand --testPathPatterns=perf || node -e \"console.log('Frontend benchmark smoke skipped; jest is unavailable in this environment.')\")",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^17.3.0",
+    "lint-staged": "^17.6.0",
     "openapi-typescript": "^7.0.0"
   },
   "dependencies": {
