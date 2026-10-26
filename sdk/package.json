@@ -1,7 +1,7 @@
 {
   "name": "@finchippay/sdk",
   "version": "1.0.0",
-  "description": "TypeScript client library for the Finchippay Solution API — instant, low-fee payments on the Stellar network.",
+  "description": "TypeScript client library for the Finchippay Solution API \u2014 instant, low-fee payments on the Stellar network.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -9,7 +9,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "type-check": "tsc --noEmit",
     "prepublish": "npm run build"
   },
