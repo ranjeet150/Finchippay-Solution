@@ -39,7 +39,6 @@ Thumbs.db
 
 # ─── Editor ───────────────────────────────────────────────────────────────────
 # Ignore personal editor settings but track shared team config
-.vscode/*
 !.vscode/extensions.json
 !.vscode/launch.json
 .idea/
@@ -75,7 +74,6 @@ sbom/
 
 # ─── Misc ─────────────────────────────────────────────────────────────────────
 *.log
-.env
 dist/
 build/
 # Playwright
@@ -92,3 +90,4 @@ scripts/create_issues.py
 
 # Webhook SQLite database (runtime artifact, never commit)
 backend/data/
+config.bat

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "eslint . --ext .ts,.tsx --ignore-pattern '**/__tests__/**'",
     "analyze": "set ANALYZE=true && next build",
     "i18n:scan": "i18next-scanner --config i18next-scanner.config.js",
@@ -19,7 +19,7 @@
     "test:e2e:report": "playwright show-report",
     "test:visual": "playwright test e2e/visual-regression.spec.ts",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "node init && storybook build"
   },
   "dependencies": {
     "@finchippay/sdk": "file:../sdk",
